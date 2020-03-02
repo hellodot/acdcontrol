@@ -88,20 +88,20 @@ In the following examples I assume that your HID device is ``/dev/hiddev0``. You
 acdcontrol --help
     Show long help message.
 
-acdcontrol --detect /dev/hiddev*
+acdcontrol --detect /dev/usb/hiddev*
     Perform detection, which HID device is actually your display to be controlled.
 
-acdcontrol /dev/hiddev0
+acdcontrol /dev/usb/hiddev0
     Read current brightness parameter
 
-acdcontrol /dev/hiddev0 160
+acdcontrol /dev/usb/hiddev0 160
     Set brightness to 160. Note, that brightness setting depends on your model. Generally, this
     parameter may get values in the range ``[0-255]``.
 
-acdcontrol /dev/hiddev0 +10
+acdcontrol /dev/usb/hiddev0 +10
     Increment current brightness by 10.
 
-acdcontrol /dev/hiddev0 -- -10
+acdcontrol /dev/usb/hiddev0 -- -10
     Decrement current brightness by 10. Please,note ``--``!
 
 
